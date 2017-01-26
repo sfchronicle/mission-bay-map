@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.seo_title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="__sync_contentCategory" content="meterA">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %>
+
+    <%= t.include("partials/_head.html") %>
+
+  </head>
+
+  <%= !json.project.embedded ? "<body>" : "<body is='responsive-body'>" %>
+
+    <div class="outer">
+
+    <div class="interactive-wrapper">
+
+      <div class="interactive-header">
+        <div class="hed">Views make downtown SF rooftops worth the walk</div>
+        <div class="chatter">Tucked amid San Francisco’s towers are 10 unusual perches as high as 16 stories, a collection of rooftop public spaces unmatched in any other city. Here’s our guide to finding them.<div>Click on the map below to see each rooftop.</div></div>
+      </div>
+      <div class="image mobile hideimg">
+        <img class="background" src="./assets/graphics/rooftops_mobile.jpeg" usemap="#imageMap">
+        <map name="imageMap">
+          <area class="map-group-mobile" shape="rect" coords="216,18,236,39" alt="150california" title="150california"/>
+          <area class="map-group-mobile" shape="rect" coords="177,20,197,40" alt="343sansome" title="343sansome"/>
+          <area class="map-group-mobile" shape="rect" coords="238,112,260,131" alt="543howard" title="543howard"/>
+          <area class="map-group-mobile" shape="rect" coords="222,83,249,107" alt="1001stst" title="1001stst"/>
+          <area class="map-group-mobile" shape="rect" coords="168,83,190,103" alt="onemontgomery" title="onemontgomery"/>
+          <area class="map-group-mobile" shape="rect" coords="155,109,173,125" alt="onekearny" title="onekearny"/>
+          <area class="map-group-mobile" shape="rect" coords="107,151,159,192" alt="westfield" title="westfield"/>
+          <area class="map-group-mobile" shape="rect" coords="140,194,162,215" alt="intercontinental" title="intercontinental"/>
+          <area class="map-group-mobile" shape="rect" coords="107,193,127,211" alt="hampton" title="hampton"/>
+          <area class="map-group-mobile" shape="rect" coords="57,233,84,258" alt="federal" title="federal"/>
+        </map>
+        <div class="tooltip hide" id="tooltip-mobile"></div>
+      </div>
+      <div class="image ipad hideimg">
+        <div class="tooltip hide" id="tooltip-ipad"></div>
+        <img class="background" src="./assets/graphics/rooftops_ipad.jpeg" usemap="#imageMapIpad">
+        <map name="imageMapIpad">
+          <area class="map-group-ipad" shape="rect" coords="516,43,563,91" alt="150california" title="150california"/>
+          <area class="map-group-ipad" shape="rect" coords="429,48,473,85" alt="343sansome" title="343sansome"/>
+          <area class="map-group-ipad" shape="rect" coords="567,269,623,309" alt="543howard" title="543howard"/>
+          <area class="map-group-ipad" shape="rect" coords="541,205,594,251" alt="1011stst" title="1011stst"/>
+          <area class="map-group-ipad" shape="rect" coords="409,199,451,247" alt="onemontgomery" title="onemontgomery"/>
+          <area class="map-group-ipad" shape="rect" coords="372,268,413,300" alt="onekearny" title="onekearny"/>
+          <area class="map-group-ipad" shape="rect" coords="264,372,366,454" alt="westfield" title="westfield"/>
+          <area class="map-group-ipad" shape="rect" coords="336,465,391,515" alt="intercontinental" title="intercontinental"/>
+          <area class="map-group-ipad" shape="rect" coords="256,461,299,503" alt="hampton" title="hampton"/>
+          <area class="map-group-ipad" shape="rect" coords="136,563,195,617" alt="federal" title="federal"/>
+        </map>
+      </div>
+      <div class="image desktop hideimg">
+        <div class="tooltip hide" id="tooltip-desktop"></div>
+        <img class="background" src="./assets/graphics/rooftops_desktop.jpeg" usemap="#imageMapDesktop">
+        <map name="imageMapDesktop">
+          <area class="map-group-desktop" shape="rect" coords="607,58,663,104" alt="150california" title="150california"/>
+          <area class="map-group-desktop" shape="rect" coords="502,56,554,101" alt="343sansome" title="343sansome"/>
+          <area class="map-group-desktop" shape="rect" coords="671,313,724,359" alt="543howard" title="543howard"/>
+          <area class="map-group-desktop" shape="rect" coords="629,235,694,298" alt="1001stst" title="1001stst"/>
+          <area class="map-group-desktop" shape="rect" coords="474,237,535,287" alt="onemontgomery" title="onemontgomery"/>
+          <area class="map-group-desktop" shape="rect" coords="437,310,481,351" alt="onekearny" title="onekearny"/>
+          <area class="map-group-desktop" shape="rect" coords="316,427,432,532" alt="westfield" title="westfield"/>
+          <area class="map-group-desktop" shape="rect" coords="392,544,460,604" alt="intercontinental" title="intercontinental"/>
+          <area class="map-group-desktop" shape="rect" coords="302,542,352,588" alt="hampton" title="hampton"/>
+          <area class="map-group-desktop" shape="rect" coords="170,661,226,715" alt="federal" title="federal"/>
+        </map>
+      </div>
+      <div class="interactive-credit">
+        <div class="entry">Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
+        <div class="entry">John Blanchard  &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a></div>
+      </div>
+      <div class="interactive-credit">Read the full story <a href="http://www.sfchronicle.com/bayarea/place/article/San-Francisco-has-wealth-of-rooftop-public-9321535.php" target="_blank">here.</a></div>
+
+    </div>
+
+    </div>
+
+    <script>
+      var mapData = <%= JSON.stringify(csv.map_data) %>;
+    </script>
+
+    <script src="app.js" async></script>
+    <%= t.include("partials/_helloSFC.html") %>
+
+  </body>
+</html>
