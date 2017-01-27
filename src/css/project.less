@@ -20,6 +20,13 @@
   }
 }
 
+.byline {
+  font-family: @block-graphics;
+  text-align: center;
+  font-style: normal;
+  font-size: 14px;
+}
+
 .interactive-header, .interactive-credit {
   width: 95%;
   margin: auto;
@@ -61,10 +68,14 @@
     display: none;
   }
   @media @mobile {
+    padding-top: 5px;
     position: relative;
     // width: 90%;
     margin: auto;
-    margin-top: 20px;
+    -webkit-box-shadow: 0 0 0;
+    -moz-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+    // margin-top: 20px;
   }
 }
 
@@ -77,10 +88,19 @@
   img {
     width: 100%;
   }
+  .name {
+    font-size: 18px;
+    font-family: @bold-graphics;
+    padding-bottom: 2px;
+  }
   .address {
     font-size: 16px;
-    font-family: @med-graphics;
+    // font-family: @med-graphics;
     padding-bottom: 10px;
+    @media @mobile {
+      font-size: 14px;
+      padding-bottom: 15px;
+    }
   }
   .caption {
     padding: 0;
