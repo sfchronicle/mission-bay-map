@@ -2,6 +2,12 @@
 // clickable map ---------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
+.instructions {
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+
 .interactive-source, .interactive-credit {
   clear: left;
   padding-top: 10px;
@@ -33,16 +39,27 @@
   padding: 10px 0;
 }
 
-.map-group {
+.map-group, .map-group-ipad, .mpa-group-mobile {
   cursor: pointer;
+}
+
+.small-mobile, .mobile {
+  &.image {
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+  }
 }
 
 .image {
   display: block;
   text-align: center;
-  width: 100%;
+  margin: auto;
   &.hideimg {
     display: none;
+  }
+  img {
+    width: 100%;
   }
 }
 
@@ -53,6 +70,7 @@
 }
 
 .tooltip {
+  // pointer-events:none;
   position: absolute;
   background: white;
   padding: 15px;
